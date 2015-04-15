@@ -6,7 +6,6 @@ import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -16,7 +15,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 import android.app.LoaderManager;
-
+//github push test
 public class MainActivity extends Activity implements
         LoaderManager.LoaderCallbacks<Cursor>{
 
@@ -123,9 +122,8 @@ public class MainActivity extends Activity implements
                 CountriesDb.KEY_CODE,
                 CountriesDb.KEY_NAME,
                 CountriesDb.KEY_CONTINENT};
-        CursorLoader cursorLoader = new CursorLoader(this,
+        return new CursorLoader(this,
                 MyContentProvider.CONTENT_URI, projection, null, null, null);
-        return cursorLoader;
     }
 
     @Override
